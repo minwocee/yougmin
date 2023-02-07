@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>Create Todo</title>
+	<link rel="stylesheet" href="{% static 'todo_app/bootstrap/bootstrap.min.css' %}">
+</head>
+<body>
+	<h1>Create New Todos</h1>
+	<hr/>
+
+    <!--{% csrf_token %}은 장고가 해킹을 방지하는 기본 기능 이다.-->
+	<form method='post' enctype="multipart/form-data" action="">{% csrf_token %}
+		<table>
+			{{ form }}
+		</table>
+		<button type="submit" class="btn btn-primary float-right">Submit</button>
+	</form>
+</body>
+</html>
